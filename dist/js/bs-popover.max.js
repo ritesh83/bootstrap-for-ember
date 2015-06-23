@@ -237,6 +237,7 @@
       }
       options.data.view.on("willClearRender", function() {
         var pop;
+        this.off("willClearRender");
         pop = self.registeredTips[id];
         if (pop.eventName === 'manual') {
           pop.data.removeObserver("show", pop);
